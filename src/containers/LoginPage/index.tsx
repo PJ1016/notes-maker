@@ -11,6 +11,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 const PaperCard = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   padding: theme.spacing(4),
@@ -21,8 +22,15 @@ const CenteredBox = styled(Box)(() => ({
   height: "100vh",
   alignItems: "center",
 }));
-
-const LoginPage = () => {
+type TLoginPage = {
+  handleLoginSuccess: any;
+};
+const LoginPage = ({ handleLoginSuccess }: TLoginPage) => {
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    handleLoginSuccess(true);
+    navigate("/");
+  };
   return (
     <CenteredBox>
       <PaperCard elevation={5}>
@@ -47,7 +55,9 @@ const LoginPage = () => {
             }}
             type="password"
           />
-          <Button variant="contained">LOGIN</Button>
+          <Button variant="contained" onClick={handleLogin}>
+            LOGIN
+          </Button>
         </Stack>
       </PaperCard>
     </CenteredBox>
