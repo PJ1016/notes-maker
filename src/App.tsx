@@ -1,27 +1,20 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LoginPage from "./containers/LoginPage";
-import { useState } from "react";
-import DashBoard from "./containers/DashBoard";
-
+import PlayerStats from "./containers/PlayerStats";
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-    // Redirect to home page or wherever you want after login
-  };
   const router = createBrowserRouter([
     {
       path: "/",
-      element: isLoggedIn ? (
-        <DashBoard />
-      ) : (
-        <LoginPage handleLoginSuccess={handleLoginSuccess} />
-      ),
+      element: <PlayerStats />,
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router}></RouterProvider>
+    </QueryClientProvider>
+  );
 }
 
 export default App;
