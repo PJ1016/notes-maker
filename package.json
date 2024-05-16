@@ -1,4 +1,5 @@
 {
+  "homepage": "https:/pj9494.github.io/notes_maker/",
   "name": "notes-maker",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
     "@testing-library/react": "^14.2.2",
     "@types/jest": "^29.5.12",
     "@types/testing-library__react": "^10.2.0",
+    "gh-pages": "^6.1.1",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2"
   }
