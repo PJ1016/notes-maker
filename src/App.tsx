@@ -8,7 +8,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const queryClient = new QueryClient();
 
 const isProduction = process.env.NODE_ENV === "production";
-const basename = isProduction ? "/Resume" : "/";
+const basename = isProduction ? "/notes-maker" : "/";
 function App() {
   const router = createBrowserRouter(
     [
