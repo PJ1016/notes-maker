@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pj9494.github.io/notes_maker/static/css/main.e6c13ad2.css",
+    "main.js": "/pj9494.github.io/notes_maker/static/js/main.685af3c6.js",
+    "static/js/453.7eb680ae.chunk.js": "/pj9494.github.io/notes_maker/static/js/453.7eb680ae.chunk.js",
+    "index.html": "/pj9494.github.io/notes_maker/index.html",
+    "main.e6c13ad2.css.map": "/pj9494.github.io/notes_maker/static/css/main.e6c13ad2.css.map",
+    "main.685af3c6.js.map": "/pj9494.github.io/notes_maker/static/js/main.685af3c6.js.map",
+    "453.7eb680ae.chunk.js.map": "/pj9494.github.io/notes_maker/static/js/453.7eb680ae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.685af3c6.js"
+  ]
+}
